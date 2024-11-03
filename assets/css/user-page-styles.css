@@ -1,0 +1,343 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.top-nav ul li a:hover,
+.top-nav ul li a.active {
+    background-color: #495057;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .top-nav {
+        display: block;
+        padding: 0;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .top-nav ul li {
+        width: 100%;
+    }
+
+    .top-nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+
+/* Main Container for Body Content */
+.container {
+    display: flex;
+    flex-direction: column; /* Allows content to align vertically */
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/* Box Styles (e.g., Symptom Checker Card) */
+.box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+
+.box h2 {
+    font-size: 1.8em; /* Slightly larger heading */
+    margin-bottom: 10px;
+    color: #007bff; /* Primary color for headings */
+}
+
+.box p {
+    margin-bottom: 15px; /* Space between paragraph and button */
+}
+
+/* Improved Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal appears above other content */
+}
+
+.modal-content {
+    background: #f8f9fa; /* Light background for modal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px; /* Max width for the modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative; /* Position for the close button */
+}
+
+/* Chatbox Styles */
+#chatbox {
+    display: flex;
+    flex-direction: column;
+}
+
+#chatLog {
+    border: none; /* Remove border */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    height: 300px; /* Fixed height for chat log */
+    overflow-y: auto; /* Scrollable chat log */
+    background: #f1f1f1; /* Light gray background for chat log */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Message Styles */
+#chatLog p {
+    margin: 10px 0; /* Space between messages */
+    padding: 8px 12px; /* Padding for messages */
+    border-radius: 15px; /* Rounded message bubbles */
+}
+
+#chatLog .user-message {
+    background-color: #007bff; /* Blue background for user messages */
+    color: white; /* White text for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+#chatLog .bot-message {
+    background-color: #e1e1e1; /* Light gray background for bot messages */
+    color: black; /* Black text for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+/* Input Group for Message Input and Send Button */
+.input-group {
+    display: flex; /* Align input and button side by side */
+    margin-top: 10px; /* Space above input group */
+}
+
+#userInput {
+    flex: 1; /* Allow input field to fill available space */
+    padding: 10px;
+    border: 1px solid #007bff; /* Border color to match theme */
+    border-radius: 5px; /* Rounded corners for input field */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Close Button Styles */
+.close-btn {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #dc3545; /* Red color for close button */
+    position: absolute; /* Position at top right corner */
+    top: 15px;
+    right: 15px;
+    font-size: 1.5em; /* Increase size of close button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close-btn:hover {
+    color: #c82333; /* Darker red on hover */
+}
+
+/* Telemedicine Modal Styles */
+.telemedicine-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal appears above other content */
+}
+
+/* Input Styles for Date and Time */
+label {
+    margin-top: 10px; /* Space above labels */
+    display: block; /* Block display for labels */
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    border: 1px solid #007bff; /* Border color to match theme */
+    border-radius: 5px; /* Rounded corners for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+}
+
+/* Confirm Appointment Button Styles */
+.confirm-btn {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block; /* Centered button on modal */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+    font-size: 1em;
+    font-weight: bold; /* Bold for visibility */
+    text-align: center; /* Center text in the button */
+    margin-top: 10px; /* Space above the button */
+}
+
+.confirm-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* General Button Styles for Cards */
+.card-btn {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block; /* Centered button on card */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+    font-size: 1em;
+    font-weight: bold; /* Bold for visibility */
+    text-align: center; /* Center text in the button */
+    margin-top: 10px; /* Space above the button */
+    text-decoration: none;
+}
+
+.card-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Send Button Styles */
+.send-btn {
+    background-color: #28a745; /* Green color for send button */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex; /* Center icon vertically */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+    font-size: 1em;
+}
+
+.send-btn:hover {
+    background-color: #218838; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    padding: 15px 0; /* Padding for top and bottom */
+    border-radius: 5px;
+    position: relative; /* Position relative for proper layout */
+    margin-top: 20px; /* Space above the footer */
+}
+
+.footer-content {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+/* Footer Links Styles */
+.footer-links {
+    margin-top: 10px; /* Space above links */
+}
+
+.footer-links a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    display: inline-block; /* Display links as block for better spacing */
+}
+
+.footer-links a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+

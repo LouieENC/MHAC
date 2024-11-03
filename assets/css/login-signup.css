@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/mhc.png);
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes the full screen */
+    padding: 20px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between the login and welcome boxes */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px; /* Limit the container width */
+    width: 100%;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.login-box, .welcome-box {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Centers text inside the boxes */
+}
+
+.login-box {
+    background-color: #004d64;
+    color: #fff;
+}
+
+.welcome-box {
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-left: 1px solid #f0f0f0;
+}
+
+.logo img {
+    width: 100px;
+    display: block;
+    margin: 0 auto; /* Centers the logo */
+}
+
+.logo h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    text-align: center; /* Center the title */
+}
+
+.logo p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center; /* Center the paragraph */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center; /* Center the heading */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.toggle-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.toggle-link:hover {
+    color: #0056b3;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.welcome-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Center the heading */
+}
+
+.welcome-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify; /* Justify the paragraph for better readability */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons i {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .login-box, .welcome-box {
+        width: 100%;
+        padding: 30px;
+        border-left: none;
+    }
+
+    .welcome-box {
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    /* Ensure the logo remains centered on smaller screens */
+    .logo img {
+        width: 80px; /* Slightly smaller for mobile */
+    }
+
+    .logo h1, .logo p {
+        text-align: center;
+    }
+}
